@@ -1,0 +1,106 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+section, article, aside {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Box Model */
+.card {
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 10px;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    padding: 10px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #eee;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Loader */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 5px solid lightgray;
+    border-top: 5px solid black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* Pagination */
+.pagination a {
+    padding: 8px;
+    border: 1px solid black;
+    margin: 2px;
+    text-decoration: none;
+}
+
+/* Flexbox */
+.flexbox {
+    display: flex;
+    gap: 10px;
+}
+.flexbox div {
+    background: lightblue;
+    padding: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid div {
+    background: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
