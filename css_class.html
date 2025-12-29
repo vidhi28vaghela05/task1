@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSS Tasks Demo</title>
 
 <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,57 +18,89 @@
 </head>
 <body>
 
-<h1>CSS Tasks Demonstration</h1>
+<div class="container-fluid" style="max-width: 1200px; margin: 0 auto;">
+
+<h1>🎨 CSS Tasks Demonstration</h1>
 
 <!-- 1. Borders -->
+<div class="section-container">
 <h2>1. Border Styles</h2>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
 <div class="border-top">Top Border</div>
 <div class="border-right">Right Border</div>
 <div class="border-bottom">Bottom Border</div>
 <div class="border-left">Left Border</div>
+</div>
+</div>
 
 <!-- 2. Hover -->
+<div class="section-container">
 <h2>2. Hover Pseudo Class</h2>
+<div style="display: flex; justify-content: center;">
 <div class="hover-box">Hover Me</div>
+</div>
+</div>
 
 <!-- 3. Anchor pseudo -->
+<div class="section-container">
 <h2>3. Anchor Pseudo Class</h2>
-<a href="#">Normal Link</a>
+<p><a href="#">Normal Link</a> | <a href="#">Visited Link</a></p>
+</div>
 
 <!-- 4. Pseudo Elements -->
+<div class="section-container">
 <h2>4. Pseudo Elements</h2>
 <p class="pseudo-text">
 This paragraph shows first letter, first line, before, after and selection.
 </p>
+</div>
 
 <!-- 5. Display -->
+<div class="section-container">
 <h2>5. Display Property</h2>
-<h1>Default H1 (Block)</h1>
-<h1 class="inline-h1">Inline H1</h1>
+<div style="background: #f0f0f0; padding: 15px; border-radius: 5px;">
+<h1 style="margin: 10px 0;">Default H1 (Block)</h1>
+<h1 class="inline-h1" style="margin: 10px 0;">Inline H1</h1>
+</div>
+</div>
 
 <!-- 6. Position -->
+<div class="section-container">
 <h2>6. Position Property</h2>
 <p class="fixed-text">Fixed Position Text</p>
+<p style="color: #666;">*(See bottom-right corner)*</p>
+</div>
 
 <!-- 7. Image hover zoom -->
+<div class="section-container">
 <h2>7. Image Hover Zoom</h2>
+<div style="display: flex; justify-content: center;">
 <div class="img-box">
-  <img src="https://picsum.photos/200" alt="">
+  <img src="https://picsum.photos/200" alt="Zoom Image">
+</div>
+</div>
 </div>
 
 <!-- 8. List styles -->
+<div class="section-container">
 <h2>8. List Styles</h2>
 <ul class="square-list">
   <li>Item One</li>
   <li>Item Two</li>
+  <li>Item Three</li>
 </ul>
+</div>
 
 <!-- 9. Visibility -->
+<div class="section-container">
 <h2>9. Visibility</h2>
 <div class="visibility-box">Hover to Hide</div>
+</div>
 
 <!-- 10. Cursor -->
+<div class="section-container">
 <h2>10. Cursor Types</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px;">
 <div class="cursor pointer">Pointer</div>
 <div class="cursor move">Move</div>
 <div class="cursor text">Text</div>
@@ -76,55 +109,97 @@ This paragraph shows first letter, first line, before, after and selection.
 <div class="cursor zoomin">Zoom In</div>
 <div class="cursor zoomout">Zoom Out</div>
 <div class="cursor help">Help</div>
+</div>
+</div>
 
 <!-- 11. Button -->
+<div class="section-container">
 <h2>11. Button</h2>
+<div style="display: flex; justify-content: center;">
 <div class="btn-div">Click Me</div>
+</div>
+</div>
 
 <!-- 12. CSS Filters -->
+<div class="section-container">
 <h2>12. Image Filters</h2>
-<img class="blur" src="https://picsum.photos/150">
-<img class="grayscale" src="https://picsum.photos/150">
-<img class="sepia" src="https://picsum.photos/150">
-<img class="brightness" src="https://picsum.photos/150">
-<img class="contrast" src="https://picsum.photos/150">
+<div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: center;">
+<div style="text-align: center;"><img class="blur" src="https://picsum.photos/150" alt="Blur"><p style="font-size: 12px; margin-top: 5px;">Blur</p></div>
+<div style="text-align: center;"><img class="grayscale" src="https://picsum.photos/150" alt="Grayscale"><p style="font-size: 12px; margin-top: 5px;">Grayscale</p></div>
+<div style="text-align: center;"><img class="sepia" src="https://picsum.photos/150" alt="Sepia"><p style="font-size: 12px; margin-top: 5px;">Sepia</p></div>
+<div style="text-align: center;"><img class="brightness" src="https://picsum.photos/150" alt="Brightness"><p style="font-size: 12px; margin-top: 5px;">Brightness</p></div>
+<div style="text-align: center;"><img class="contrast" src="https://picsum.photos/150" alt="Contrast"><p style="font-size: 12px; margin-top: 5px;">Contrast</p></div>
+</div>
+</div>
 
 <!-- 13. Colors -->
+<div class="section-container">
 <h2>13. Color Formats</h2>
-<div class="hex">HEX</div>
-<div class="rgb">RGB</div>
-<div class="rgba">RGBA</div>
-<div class="hsl">HSL</div>
-<div class="hsla">HSLA</div>
-<div class="name">Color Name</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+<div class="hex" style="padding: 20px; text-align: center; border-radius: 5px; color: white;">HEX #ff0000</div>
+<div class="rgb" style="padding: 20px; text-align: center; border-radius: 5px; color: white;">RGB(0,255,0)</div>
+<div class="rgba" style="padding: 20px; text-align: center; border-radius: 5px;">RGBA</div>
+<div class="hsl" style="padding: 20px; text-align: center; border-radius: 5px; color: white;">HSL</div>
+<div class="hsla" style="padding: 20px; text-align: center; border-radius: 5px; color: white;">HSLA</div>
+<div class="name" style="padding: 20px; text-align: center; border-radius: 5px; color: white;">Color Name</div>
+</div>
+</div>
 
 <!-- 14. CSS Selectors -->
+<div class="section-container">
 <h2>14. CSS Selectors</h2>
-<p id="id-selector">ID Selector</p>
-<p class="class-selector">Class Selector</p>
-<p>Element Selector</p>
+<p id="id-selector">ID Selector (Red)</p>
+<p class="class-selector">Class Selector (Blue)</p>
+<p>Element Selector (Default)</p>
+</div>
 
 <!-- 15. Shadow -->
-<h2>15. Shadow</h2>
+<div class="section-container">
+<h2>15. Shadow Effects</h2>
+<div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
 <div class="box-shadow">Box Shadow</div>
-<h1 class="text-shadow">Text Shadow</h1>
+<div><h1 class="text-shadow" style="margin: 0; font-size: 2em;">Text Shadow</h1></div>
+</div>
+</div>
 
 <!-- 16. Gradient -->
-<h2>16. Gradient</h2>
-<div class="linear">Linear Gradient</div>
-<div class="radial">Radial Gradient</div>
+<div class="section-container">
+<h2>16. Gradient Backgrounds</h2>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+<div class="linear" style="border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">Linear Gradient</div>
+<div class="radial" style="border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">Radial Gradient</div>
+</div>
+</div>
 
 <!-- 17. Text Properties -->
+<div class="section-container">
 <h2>17. Text Properties</h2>
-<p class="text1">Normal Text</p>
-<p class="text2">Big Bold Text</p>
-<p class="text3">Styled Font</p>
+<p class="text1">Normal Text (14px)</p>
+<p class="text2">Big Bold Text (20px)</p>
+<p class="text3">Styled Font (Poppins Italic Purple)</p>
+</div>
 
 <!-- 18. Libraries -->
-<h2>18. Libraries Used</h2>
-<p style="font-family:Poppins">Google Font Text</p>
-<i class="fa fa-user"></i> Font Awesome Icon
-<button class="btn btn-primary">Bootstrap Button</button>
+<div class="section-container">
+<h2>18. Libraries & Resources</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+<div style="padding: 15px; background: #f9f9f9; border-radius: 5px; border-left: 4px solid #667eea;">
+<p style="font-family:Poppins; margin: 0; font-weight: 600;">Google Fonts</p>
+<small>Poppins Font Family</small>
+</div>
+<div style="padding: 15px; background: #f9f9f9; border-radius: 5px; border-left: 4px solid #764ba2;">
+<i class="fa fa-user" style="font-size: 1.5em;"></i>
+<p style="margin: 5px 0 0 0; font-weight: 600;">Font Awesome</p>
+<small>Icon Library</small>
+</div>
+<div style="padding: 15px; background: #f9f9f9; border-radius: 5px; border-left: 4px solid #667eea;">
+<button class="btn btn-primary" style="width: 100%;">Bootstrap</button>
+<small>Button Component</small>
+</div>
+</div>
+</div>
+
+</div>
 
 </body>
 </html>

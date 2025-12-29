@@ -1,142 +1,317 @@
 body {
-  font-family: Arial;
+  font-family: 'Poppins', Arial, sans-serif;
   padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+h2 {
+  color: #333;
+  padding: 10px 0;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.3em;
+}
+
+.section-container {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 /* 1. Borders */
-.border-top { border-top:1px solid black; margin:5px }
-.border-right { border-right:2px dashed red; margin:5px }
-.border-bottom { border-bottom:3px dotted blue; margin:5px }
-.border-left { border-left:4px double green; margin:5px }
+.border-top { 
+  border-top: 1px solid black; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border-right { 
+  border-right: 2px dashed red; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border-bottom { 
+  border-bottom: 3px dotted blue; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border-left { 
+  border-left: 4px double green; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
 
 /* 2. Hover */
 .hover-box {
-  width:150px;
-  padding:20px;
-  background:orange;
+  width: 150px;
+  padding: 20px;
+  background: orange;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 .hover-box:hover {
-  background:red;
-  transform:scale(1.1);
+  background: red;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255,0,0,0.3);
 }
 
 /* 3. Anchor */
-a:visited { color:purple }
-a:active { color:red }
+a { 
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+a:visited { color: purple }
+a:active { color: red }
 
 /* 4. Pseudo elements */
-.pseudo-text::first-letter { font-size:30px; color:red }
-.pseudo-text::first-line { font-weight:bold }
-.pseudo-text::before { content:"★ "; }
-.pseudo-text::after { content:" ★"; }
+.pseudo-text {
+  line-height: 1.8;
+  font-size: 16px;
+}
+.pseudo-text::first-letter { 
+  font-size: 30px; 
+  color: #667eea;
+  font-weight: bold;
+}
+.pseudo-text::first-line { 
+  font-weight: bold;
+  color: #333;
+}
+.pseudo-text::before { 
+  content: "★ ";
+  color: #667eea;
+}
+.pseudo-text::after { 
+  content: " ★";
+  color: #667eea;
+}
 .pseudo-text::selection {
-  background:red;
-  color:white;
+  background: #667eea;
+  color: white;
 }
 
 /* 5. Display */
-.inline-h1 { display:inline }
+.inline-h1 { 
+  display: inline;
+  background: #667eea;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
 
 /* 6. Position */
 .fixed-text {
-  position:fixed;
-  bottom:10px;
-  right:10px;
-  background:yellow;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: yellow;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
+  z-index: 999;
 }
 
 /* 7. Image zoom */
 .img-box {
-  width:200px;
-  overflow:hidden;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .img-box img {
-  width:100%;
-  transition:0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
 }
 .img-box:hover img {
-  transform:scale(1.2);
+  transform: scale(1.2);
 }
 
 /* 8. List */
 .square-list {
-  list-style-type:square;
+  list-style-type: square;
+  padding-left: 40px;
+}
+.square-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 /* 9. Visibility */
+.visibility-box {
+  background: #667eea;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  transition: visibility 0.5s;
+  font-weight: bold;
+}
 .visibility-box:hover {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 /* 10. Cursor */
 .cursor {
-  padding:10px;
-  display:inline-block;
-  margin:5px;
-  background:#eee;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 8px;
+  background: #eee;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
 }
-.pointer { cursor:pointer }
-.move { cursor:move }
-.text { cursor:text }
-.wait { cursor:wait }
-.notallowed { cursor:not-allowed }
-.zoomin { cursor:zoom-in }
-.zoomout { cursor:zoom-out }
-.help { cursor:help }
+.cursor:hover {
+  background: #667eea;
+  color: white;
+  border-color: #764ba2;
+}
+.pointer { cursor: pointer }
+.move { cursor: move }
+.text { cursor: text }
+.wait { cursor: wait }
+.notallowed { cursor: not-allowed }
+.zoomin { cursor: zoom-in }
+.zoomout { cursor: zoom-out }
+.help { cursor: help }
 
 /* 11. Button */
 .btn-div {
-  background:green;
-  color:white;
-  padding:10px 20px;
-  width:fit-content;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 30px;
+  width: fit-content;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+.btn-div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 /* 12. Filters */
-.blur { filter:blur(2px) }
-.grayscale { filter:grayscale(100%) }
-.sepia { filter:sepia(100%) }
-.brightness { filter:brightness(150%) }
-.contrast { filter:contrast(150%) }
+.blur { 
+  filter: blur(2px);
+  border-radius: 5px;
+}
+.grayscale { 
+  filter: grayscale(100%);
+  border-radius: 5px;
+}
+.sepia { 
+  filter: sepia(100%);
+  border-radius: 5px;
+}
+.brightness { 
+  filter: brightness(150%);
+  border-radius: 5px;
+}
+.contrast { 
+  filter: contrast(150%);
+  border-radius: 5px;
+}
 
 /* 13. Colors */
-.hex { background:#ff0000 }
-.rgb { background:rgb(0,255,0) }
-.rgba { background:rgba(0,0,255,0.5) }
-.hsl { background:hsl(200,100%,50%) }
-.hsla { background:hsla(100,50%,50%,0.7) }
-.name { background:gold }
+.hex { 
+  background: #ff0000;
+}
+.rgb { 
+  background: rgb(0,255,0);
+}
+.rgba { 
+  background: rgba(0,0,255,0.5);
+}
+.hsl { 
+  background: hsl(200,100%,50%);
+}
+.hsla { 
+  background: hsla(100,50%,50%,0.7);
+}
+.name { 
+  background: gold;
+}
 
 /* 14. Selectors */
-* { box-sizing:border-box }
-#id-selector { color:red }
-.class-selector { color:blue }
+* { box-sizing: border-box }
+#id-selector { 
+  color: red;
+  font-weight: bold;
+}
+.class-selector { 
+  color: blue;
+  font-weight: bold;
+}
 
 /* 15. Shadow */
 .box-shadow {
-  width:150px;
-  padding:10px;
-  box-shadow:2px 2px 10px black;
+  width: 150px;
+  padding: 20px;
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
 }
 .text-shadow {
-  text-shadow:2px 2px 5px red;
+  text-shadow: 2px 2px 5px rgba(255,0,0,0.5);
+  color: #667eea;
 }
 
 /* 16. Gradient */
 .linear {
-  height:100px;
-  background:linear-gradient(to right, red, yellow);
+  height: 100px;
+  background: linear-gradient(to right, red, yellow);
+  border-radius: 6px;
 }
 .radial {
-  height:100px;
-  background:radial-gradient(circle, blue, white);
+  height: 100px;
+  background: radial-gradient(circle, blue, white);
+  border-radius: 6px;
 }
 
 /* 17. Text */
-.text1 { font-size:14px }
-.text2 { font-size:20px; font-weight:bold }
+.text1 { 
+  font-size: 14px;
+  color: #666;
+}
+.text2 { 
+  font-size: 20px; 
+  font-weight: bold;
+  color: #333;
+}
 .text3 {
-  font-family:'Poppins';
-  font-style:italic;
-  color:purple;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  color: #667eea;
+  font-weight: 600;
 }
