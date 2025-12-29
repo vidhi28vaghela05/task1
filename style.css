@@ -104,3 +104,64 @@ th, td {
     padding: 20px;
     text-align: center;
 }
+
+.border {
+  background: #ecc0c0; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.border .topborder { 
+  border-top: 1px solid black; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border .bottomborder { 
+  border-bottom: 1px solid black; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border .rightborder { 
+  border-right: 1px solid black; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.border .leftborder { 
+  border-left: 1px solid black; 
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.hover-box {
+    width: 150px;
+    padding: 20px;
+    background: orange;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button */
+}
+.hover-box:hover {
+    background: red;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+}
+.anchor-link {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}   
+.anchor-link:hover {
+
+    color: rgb(216, 9, 95);
+    text-decoration: underline;
+}
+.anchor-link:visited {
+    color: rgb(224, 60, 31);
+}
