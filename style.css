@@ -704,3 +704,418 @@ p {
   font-size: 18px;
   color: #667eea;
 }
+/* 1. Rotating Div on Hover */
+.rotate-section {
+    padding: 20px;
+}
+.rotate-box {
+    width: 150px;
+    height: 150px;
+    background: #667eea;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+.rotate-box:hover {
+    transform: rotate(360deg);
+}
+
+/* 2. Flex vs Grid */
+.flex-grid-section {
+    padding: 20px;
+}
+.flex-container,
+.grid-container {
+    margin-bottom: 30px;
+}
+.flex-demo {
+    display: flex;
+    gap: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+.flex-demo div {
+    flex: 1;
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+.grid-demo div {
+    background: #764ba2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* 3. Justify-Content Properties */
+.justify-section {
+    padding: 20px;
+}
+.justify-section > div {
+    display: flex;
+    background: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.justify-section div > div {
+    background: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-flex-start {
+    justify-content: flex-start;
+}
+.justify-flex-end {
+    justify-content: flex-end;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.justify-space-around {
+    justify-content: space-around;
+}
+.justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* 4. Text Stroke */
+.stroke-section {
+    padding: 20px;
+}
+.text-stroke {
+    font-size: 48px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #667eea;
+    color: transparent;
+    margin: 20px 0;
+}
+
+/* 5. CSS Columns */
+.columns-section {
+    padding: 20px;
+}
+.column-auto {
+    column-count: auto;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.column-width {
+    column-width: 200px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.column-count {
+    column-count: 3;
+    column-gap: 20px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 6. CSS Hyphens */
+.hyphens-section {
+    padding: 20px;
+}
+.hyphens-none {
+    hyphens: none;
+    width: 200px;
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+}
+.hyphens-manual {
+    hyphens: manual;
+    width: 200px;
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+}
+.hyphens-auto {
+    hyphens: auto;
+    width: 200px;
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* 7. Transform Origin */
+.transform-origin-section {
+    padding: 20px;
+}
+.transform-origin-section > div {
+    width: 100px;
+    height: 100px;
+    background: #667eea;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 5px;
+    animation: rotateAnimation 2s infinite;
+}
+.origin-center {
+    transform-origin: center;
+}
+.origin-top-left {
+    transform-origin: top left;
+}
+.origin-bottom-right {
+    transform-origin: bottom right;
+}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 8. CSS Transforms */
+.transforms-section {
+    padding: 20px;
+}
+.transforms-section > div {
+    background: #667eea;
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    display: inline-block;
+}
+.transform-translate {
+    transform: translate(20px, 10px);
+}
+.transform-rotate {
+    transform: rotate(45deg);
+}
+.transform-scale {
+    transform: scale(1.5);
+}
+.transform-skewX {
+    transform: skewX(20deg);
+}
+.transform-skewY {
+    transform: skewY(20deg);
+}
+.transform-skew {
+    transform: skew(20deg, 10deg);
+}
+
+/* 9. 3D Rotation */
+.rotation-3d-section {
+    padding: 20px;
+}
+.perspective {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+.cube-3d {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    animation: rotate3d 3s infinite;
+}
+@keyframes rotate3d {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* 10. CSS Transitions */
+.transitions-section {
+    padding: 20px;
+}
+.transitions-section > div {
+    background: #667eea;
+    color: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.transition-basic {
+    transition: background-color 0.3s;
+}
+.transition-basic:hover {
+    background-color: #764ba2;
+}
+.transition-delay {
+    transition: background-color 0.3s 0.5s;
+}
+.transition-delay:hover {
+    background-color: #764ba2;
+}
+.transition-duration {
+    transition: background-color 1s;
+}
+.transition-duration:hover {
+    background-color: #764ba2;
+}
+.transition-timing {
+    transition: background-color 0.3s ease-in-out;
+}
+.transition-timing:hover {
+    background-color: #764ba2;
+}
+
+/* 11. Animated Box */
+.animated-moving-section {
+    padding: 20px;
+}
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+    animation: moveRotate 3s infinite;
+}
+@keyframes moveRotate {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(200px) rotate(180deg);
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
+/* 12. Z-Index */
+.z-index-section {
+    padding: 20px;
+    position: relative;
+    height: 250px;
+}
+.z-index-section > div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.z-box-1 {
+    background: #667eea;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+.z-box-2 {
+    background: #764ba2;
+    top: 50px;
+    left: 100px;
+    z-index: 2;
+}
+.z-box-3 {
+    background: #f093fb;
+    top: 80px;
+    left: 180px;
+    z-index: 3;
+}
+
+/* 13. Text Size Units */
+.text-units-section {
+    padding: 20px;
+}
+.text-units-section p {
+    margin: 10px 0;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.size-px {
+    font-size: 16px;
+}
+.size-em {
+    font-size: 1.5em;
+}
+.size-rem {
+    font-size: 1.5rem;
+}
+.size-mm {
+    font-size: 10mm;
+}
+.size-in {
+    font-size: 0.5in;
+}
+.size-pt {
+    font-size: 24pt;
+}
+.size-cm {
+    font-size: 1cm;
+}
+
+/* 14. Product Gallery */
+.products-section {
+    padding: 20px;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.product-card h3 {
+    padding: 15px 15px 5px;
+    margin: 0;
+}
+.product-card p {
+    padding: 0 15px 15px;
+    color: #667eea;
+    font-weight: bold;
+}
