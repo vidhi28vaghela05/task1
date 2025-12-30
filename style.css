@@ -1003,7 +1003,7 @@ p {
     height: 100px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 10px;
-    animation: moveRotate 3s infinite;
+    animation: moveRotate 3s 5;
 }
 @keyframes moveRotate {
     0% {
